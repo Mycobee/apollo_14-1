@@ -1,7 +1,16 @@
 <% @astronauts.each do |naut| %>
+<div id="astronaut-<%= naut.id %>">
     <%= naut.name %>
     <%= naut.age %>
     <%= naut.job %>
+    <%= naut.total_space_time %>
+   
+    <% naut.missions.each do |mission| %>
+        <%= mission.title %>
+        <%= mission.time_in_space %>
+
+    <% end %>
+</div>
 <% end %>
 
 <p>Average Age: <%= @astronauts.average_age.to_i %></p>

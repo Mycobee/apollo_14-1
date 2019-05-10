@@ -22,4 +22,8 @@ describe Astronaut, type: :model do
       expect(astronauts.average_age.to_i).to eq(63)
     end
   end
+
+  describe 'instance methods' do
+    
+  end
 end
